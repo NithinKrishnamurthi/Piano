@@ -45,13 +45,13 @@
 		"ts-loader": "^7.0.1",
 		"tslint": "^5.18.0",
 		"typescript": "^3.8.3",
-		"webmidi": "^2.5.1",
+		"webmidi": "^3.0.0",
 		"webpack": "^4.43.0",
 		"webpack-cli": "^3.3.11"
 	},
 	"peerDependencies": {
 		"tone": "^14.6.1",
-		"webmidi": "^2.5.1"
+		"webmidi": "^3.0.0"
 	},
 	"keywords": [
 		"Web Audio",
