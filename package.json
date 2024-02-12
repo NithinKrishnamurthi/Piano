@@ -1,9 +1,9 @@
 {
-	"name": "@tonejs/piano",
+	"name": "piano",
 	"version": "0.2.0",
 	"description": "Web Audio instrument using Salamander Grand Piano samples",
 	"repository": {
-		"url": "https://github.com/tambien/Piano"
+		"url": "https://github.com/NithinKrishnamurthi/Piano"
 	},
 	"browser": "build/Piano.js",
 	"main": "build/esm/Piano.js",
@@ -45,7 +45,7 @@
 		"ts-loader": "^7.0.1",
 		"tslint": "^5.18.0",
 		"typescript": "^3.8.3",
-		"webpack": "^5.90.1"
+		"webpack-cli": "^3.3.11"
 	},
 	"peerDependencies": {
 		"tone": "^14.6.1"
