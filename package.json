@@ -5,12 +5,12 @@
 	"repository": {
 		"url": "https://github.com/NithinKrishnamurthi/Piano"
 	},
-	"browser": "build/Piano.js",
-	"main": "build/esm/Piano.js",
-	"module": "build/esm/Piano.js",
+	"browser": "build/index.js",
+	"main": "build/index.js",
+	"module": "build/index.js",
 	"type": "module",
-	"unpkg": "build/Piano.js",
-	"types": "build/esm/Piano.d.ts",
+	"unpkg": "build/index.js",
+	"types": "build/index.d.ts",
 	"scripts": {
 		"build": "tsc",
 		"prepare": "npm run build",
@@ -44,8 +44,7 @@
 		"tone": "^14.6.1",
 		"ts-loader": "^7.0.1",
 		"tslint": "^5.18.0",
-		"typescript": "^3.8.3",
-		"webpack-cli": "^3.3.11"
+		"typescript": "^3.8.3"
 	},
 	"keywords": [
 		"Web Audio",
