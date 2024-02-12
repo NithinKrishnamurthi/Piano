@@ -1,5 +1,5 @@
 {
-	"name": "piano",
+	"name": "@tonejs/piano",
 	"version": "0.2.0",
 	"description": "Web Audio instrument using Salamander Grand Piano samples",
 	"repository": {
@@ -47,9 +47,6 @@
 		"typescript": "^3.8.3",
 		"webpack-cli": "^3.3.11"
 	},
-	"peerDependencies": {
-		"tone": "^14.6.1"
-	},
 	"keywords": [
 		"Web Audio",
 		"Tone.js",
@@ -57,6 +54,7 @@
 		"Sampler"
 	],
 	"dependencies": {
-		"tslib": "^1.11.1"
+		"tslib": "^1.11.1",
+        "tone": "^14.6.1"
 	}
 }
