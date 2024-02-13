@@ -53,7 +53,6 @@ export interface PianoOptions extends ToneAudioNodeOptions {
 interface KeyEvent {
 	time?: Unit.Time;
 	velocity?: number;
-	note?: string;
 	midi?: number;
 }
 
@@ -250,18 +249,14 @@ export class Piano extends ToneAudioNode<PianoOptions> {
 
 	/**
 	 *  Play a note.
-	 *  @param note	  The note to play. If it is a number, it is assumed to be MIDI
+	 *  @param midi	  The note to play. Number.
 	 *  @param velocity  The velocity to play the note
 	 *  @param time	  The time of the event
 	 */
-	keyDown({ note, midi, time = this.immediate(), velocity = 0.8 }: KeyEvent): this {
+	keyDown({ midi, time = this.immediate(), velocity = 0.8 }: KeyEvent): this {
 		if (this.loaded && this.maxPolyphony > this._heldNotes.size + this._sustainedNotes.size) {
 
 			time = this.toSeconds(time)
-
-			if (isString(note)) {
-				midi = Math.round(Midi(note).toMidi())
-			}
 
 			if (!this._heldNotes.has(midi)) {
 				// record the start time and velocity
@@ -278,13 +273,9 @@ export class Piano extends ToneAudioNode<PianoOptions> {
 	/**
 	 *  Release a held note.
 	 */
-	keyUp({ note, midi, time = this.immediate(), velocity = 0.8 }: KeyEvent): this {
+	keyUp({ midi, time = this.immediate(), velocity = 0.8 }: KeyEvent): this {
 		if (this.loaded) {
 			time = this.toSeconds(time)
-
-			if (isString(note)) {
-				midi = Math.round(Midi(note).toMidi())
-			}
 
 			if (this._heldNotes.has(midi)) {
 
